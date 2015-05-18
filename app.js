@@ -53,17 +53,21 @@ http.createServer(app).listen(app.get('port'), function(){
 
 
 //Insert first user
-var User = require('./models/user');		
-var newUser = new User();
-newUser.name = "nome";
-newUser.username = "admin";
-newUser.password = newUser.generateHash("123456");
-newUser.save(function (err) {
-	if (err) {
-		console.log(err)
-	} else {
-		console.log("sucesso")
+var User = require('./models/user');
+User.findOne({username : "admin"}, function (err, user) {
+	if (!user) {
+		var newUser = new User();
+		newUser.name = "nome";
+		newUser.username = "admin";
+		newUser.password = newUser.generateHash("123456");
+		newUser.save(function (err) {
+			if (err) {
+				console.log(err)
+			} else {
+				console.log("sucesso")
+			}
+		});
 	}
-});
+});		
 
 
