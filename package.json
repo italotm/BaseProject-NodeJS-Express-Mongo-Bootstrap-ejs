@@ -1,0 +1,23 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "ejs": "*",
+    "ejs-locals" : "1.0.2",
+    "express-load": "1.1.7",
+    "passport": "~0.2.0",
+    "passport-local": "~1.0.0",
+    "mongoose": "^3.8.21",
+    "bcrypt-nodejs": "*",
+    "morgan": "~1.0.0",
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.0",
+    "method-override": "~1.0.0",
+    "express-session": "^1.10.1"
+  }
+}

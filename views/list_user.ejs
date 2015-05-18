@@ -1,0 +1,84 @@
+<html>
+    <head>
+		<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0">
+		<!-- RESPONSIVE -->
+		<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <style type="text/css" rel="stylesheet">
+            #input {width:300}
+       </style>
+    </head>
+    <body>
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><b>Base Project</b></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/"><b><font color='#ffffff'>HOME</font></b></a></li>
+            <li class="dropdown">
+				
+			<!-- MENU CLIENTES -->
+              <a href="#" class="-toggle" data-toggle="dropdown"><b><font color='#ffffff'>USERS</b></font><span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/add_user"><center>ADD</center></a></li>
+                <li><a href="/list_user"><center>LIST</center></a></li>
+              </ul>
+			<li class="divider"></li>
+			<!-- FIM MENU CLIENTES -->
+			
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+			<li class="active"><a href="/logout">Logout</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+	  
+    </div>
+
+
+<div class="container custom-weight-modal">
+	<div class="row">
+	        <div class="col-md-12">
+       <br><h2><center>User List</h2><br>
+        <div class="table-responsive">
+             <table id="mytable" class="table table-bordered table-striped">
+                <thead>
+				<th><center><b>Name</b></center></th>
+				<th><center><b>Username</b></center></th>
+                </thead>
+    <tbody>
+		
+		<% users.forEach( function( user ){ %>
+	<tr>
+		<td><center><%= user.name %></td>	
+			<td><center><%= user.username %></td>
+  </tr>
+<% }); %>
+
+    </tbody>
+</table>	
+
+
+<!-- FOOTER -->
+    <nav class="navbar-inverse navbar-fixed-bottom">
+        <div class="navbar-inner navbar-content-center">
+            <p class="text-muted credit"><center><font color='#ffffff'>Developed by Italo Tavares</center></a></p>
+        </div>
+    </nav>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
