@@ -1,5 +1,5 @@
 # BaseProject-NodeJS-Express-Mongo-Bootstrap-ejs
-Base project made for those who are starting in NodeJS.It was used: express, mongo, bootstrap e ejs. To run the project, follow these steps: 
+Base project made for those who are starting in NodeJS.It was used: express, mongo, bootstrap and ejs. To run the project, follow these steps: 
 
 1 - Install NodeJS 
 2 - Install MongoDB and keep it running. 
