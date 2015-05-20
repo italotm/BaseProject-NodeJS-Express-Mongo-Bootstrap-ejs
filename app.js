@@ -29,27 +29,17 @@ app.set('port', process.env.PORT || 3000);
 app.engine( 'ejs', engine );
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-// app.use(express.favicon());
-// app.use(express.json());
-// app.use(express.urlencoded());
-// app.use(express.methodOverride());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(morgan('dev'));
-// app.use(express.cookieParser());
-// app.use(express.bodyParser());
-
-// app.use(session({ secret: 'mySecret' }));
 app.use(session({ secret: 'mySecret',
     resave: true,
     saveUninitialized: true
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-// app.use(app.router);
 
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
-// app.use(favicon(options.favicon));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -61,7 +51,6 @@ mongoose.connect('mongodb://localhost/my_db');
 
 // development only
 if ('development' == app.get('env')) {
-  // app.use(express.errorHandler());
   app.use(errorHandler());
 }
 
