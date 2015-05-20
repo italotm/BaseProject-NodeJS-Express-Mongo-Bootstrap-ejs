@@ -32,7 +32,10 @@ app.use(morgan('dev'));
 app.use(express.cookieParser());
 app.use(express.bodyParser());
 
-app.use(session({ secret: 'mySecret' }));
+app.use(session({ secret: 'mySecret',
+    resave: true,
+    saveUninitialized: true
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(app.router);
