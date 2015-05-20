@@ -6,18 +6,21 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.4.4",
+    "bcrypt-nodejs": "*",
+    "body-parser": "*",
+    "bson": "^0.3.2",
+    "cookie-parser": "~1.0.0",
     "ejs": "*",
-    "ejs-locals" : "1.0.2",
+    "ejs-locals": "1.0.2",
+    "errorhandler": "^1.3.6",
+    "express": "^4.*.*",
     "express-load": "1.1.7",
+    "express-session": "^1.10.1",
+    "method-override": "^1.0.2",
+    "mongoose": "*",
+    "morgan": "~1.0.0",
     "passport": "~0.2.0",
     "passport-local": "~1.0.0",
-    "mongoose": "^3.8.21",
-    "bcrypt-nodejs": "*",
-    "morgan": "~1.0.0",
-    "body-parser": "~1.0.0",
-    "cookie-parser": "~1.0.0",
-    "method-override": "~1.0.0",
-    "express-session": "^1.10.1"
+    "serve-favicon": "^2.2.1"
   }
 }
